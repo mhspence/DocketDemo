@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>
+APEX Caribbean FutureScape Court
+</title>
+
+<link rel="stylesheet" type="text/css" href="css/master.css">
+</head>
+<body>
+
+<div id="app" class="app">
+  <div class="main-container">
+
+    <div class="left-side">
+
+      <div class="header">
+
+        <div>
+          <img class="logo" src="images/APEX-Logo.png" alt="Coat of arms of Trinidad and Tobago"/>
+        </div>
+
+        <div>
+          <div class="title">APEX FutureScape Court</div>
+          <div class="subtitle">PROVIDENCE OF WEST COVE</div>
+        </div>
+
+      </div>
+
+      <div class="schedule-board">
+        <div class="schedule-row">
+          <div class="cell oddRowCell">CASE</div>
+          <div class="cell oddRowCell">ROOM</div>
+          <div class="cell oddRowCell">TIME</div>
+          <div class="cell oddRowCell">CASE NO.</div>
+        </div>
+
+        <div class="schedule-row" v-for="courtCase in courtCases">
+          <div v-bind:class="classObject(courtCase.id)">{{courtCase.case}}</div>
+          <div v-bind:class="classObject(courtCase.id)">{{courtCase.room}}</div>
+          <div v-bind:class="classObject(courtCase.id)">{{courtCase.time}}</div>
+          <div v-bind:class="classObject(courtCase.id)">{{courtCase.caseNumber}}</div>
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="right-side">
+      <div class="weather">
+        <div class="weather-image">
+          <img class="weather-image" src="images/images_cloudy-rain-weather-temperature-png-pictures-165776.png" alt="weather"/>
+        </div>
+        <div class="temperture">22 &deg;C</div>
+      </div>
+
+      <div class="notice-board">
+        <div class="notice-title">NEWS</div>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="footer">
+    <p class="footer-text"></p>
+  </div>
+
+</div>
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
