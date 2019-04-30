@@ -2,7 +2,7 @@ var app = new Vue ({
   el: '#app',
   data: {
     courtCases: [
-      {id:1, case:"John", room:"107", time:"9:00 am", caseNumber:"100001"},
+      {id:1, case:"John", room:"107", time:"9:00 am", caseNumber:"100011"},
       {id:2, case:"Russell", room:"109", time:"9:30 am", caseNumber:"100002"},
       {id:3, case:"Lynda", room:"110", time:"9:45 am", caseNumber:"100003"},
       {id:4, case:"Kevin", room:"215", time:"10:30 am", caseNumber:"100004"},
