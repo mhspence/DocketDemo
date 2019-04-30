@@ -1,79 +1,151 @@
-<html>
-<head>
-<title>
-APEX Caribbean FutureScape Court
-</title>
-<!--<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>-->
-<meta name="viewport" content="user-scalable=no,width=device-width,height=device-height" />
 
-<link rel="stylesheet" type="text/css" href="css/master.css">
-</head>
-<body>
+body {
+  margin:0;
+}
 
-<div id="app" class="app">
-  <div class="main-container">
+.app {
+  display: flex;
+  flex-direction: column;
+  background-color: DodgerBlue;
+  width: 100%;
+  min-height:100%;
+  min-width: 100%;
+}
 
-    <div class="left-side">
+.main-container {
+  height: 566px;
+  width: 1050px;
+  padding-top: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;
+  align-content: space-between;*/
+}
 
-      <div class="header">
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content:
+}
 
-        <div>
-          <img class="logo" src="images/APEX-Logo.png" alt="Coat of arms of Trinidad and Tobago"/>
-        </div>
+.header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
 
-        <div>
-          <div class="title">APEX FutureScape Court</div>
-          <div class="subtitle">PROVIDENCE OF WEST COVE</div>
-        </div>
+.logo {
+  width:130px;
+  height:120px;
+}
 
-      </div>
+.title {
+  font-family: sans-serif;
+  font-size: 43px;
+  color: white;
+  margin-top: 20px;
+  margin-left: 10px;
+}
 
-      <div class="schedule-board">
-        <div class="schedule-row">
-          <div class="cell oddRowCell">CASE</div>
-          <div class="cell oddRowCell">ROOM</div>
-          <div class="cell oddRowCell">TIME</div>
-          <div class="cell oddRowCell">CASE NO.</div>
-        </div>
+.subtitle {
+  font-family: sans-serif;
+  font-size: 30px;
+  color: #03f0f4;
+  margin-top: 0px;
+  margin-left: 10px;
+}
 
-        <div class="schedule-row" v-for="courtCase in courtCases">
-          <div v-bind:class="classObject(courtCase.id)">{{courtCase.case}}</div>
-          <div v-bind:class="classObject(courtCase.id)">{{courtCase.room}}</div>
-          <div v-bind:class="classObject(courtCase.id)">{{courtCase.time}}</div>
-          <div v-bind:class="classObject(courtCase.id)">{{courtCase.caseNumber}}</div>
-        </div>
+.schedule-board {
+  display: flex;
+  flex-direction: column;
+  width: 608px;
+}
+
+.schedule-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cell {
+  width: 130px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 23px;
+  color: white;
+  height: 28px;
+  padding: 5px 5px 5px 5px;
+  margin-left: 0px;
+}
+
+.oddRowCell {
+  background-color: blue;
+}
 
 
+.right-side {
+  margin-left: 1px;
+}
 
-      </div>
+.weather {
+  margin-left: 40px;
+  display: flex;
+  width: 300px;
+  height: 120px;
+  margin-right: 10px;
+}
 
+.weather-image {
+  width:120px;
+  height:105px;
+}
 
-    </div>
+.temperture {
+  font-family: sans-serif;
+  font-size: 35px;
+  color: white;
+  margin-top: 20px;
+}
 
+.notice-board {
+  width:294px;
+  height:400px;
+  padding: 15px 15px 30px;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
 
-    <div class="right-side">
-      <div class="weather">
-        <div class="weather-image">
-          <img class="weather-image" src="images/images_cloudy-rain-weather-temperature-png-pictures-165776.png" alt="weather"/>
-        </div>
-        <div class="temperture">22 &deg;C</div>
-      </div>
+.notice-title {
+  font-size: 35px;
+  font-family: sans-serif;
+  color: yellow;
+  margin-bottom: 20px;
+}
 
-      <div class="notice-board">
-        <div class="notice-title">NEWS</div>
-      </div>
+.notice-date {
+  font-size: 23px;
+  font-family: sans-serif;
+  color: #03f0f4;
+}
 
+.notice-text {
+  font-size: 23px;
+  font-family: sans-serif;
+  color: white;
+  margin-bottom: 10px;
+}
+.footer {
+  background-color: orange;
+  width: 100%;
+  height: 40px;
+}
 
-    </div>
-
-  </div>
-  <div class="footer">
-    <p class="footer-text"></p>
-  </div>
-
-</div>
-<!-- development version, includes helpful console warnings -->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="scripts/main.js"></script>
-</body>
-</html>
+.footer-text {
+  color: black;
+  font-weight: bolder;
+  font-size: 18px;
+}
