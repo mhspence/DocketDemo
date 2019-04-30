@@ -123,8 +123,21 @@ body {
   font-size: 35px;
   font-family: sans-serif;
   color: yellow;
+  margin-bottom: 20px;
 }
 
+.notice-date {
+  font-size: 23px;
+  font-family: sans-serif;
+  color: #03f0f4;
+}
+
+.notice-text {
+  font-size: 23px;
+  font-family: sans-serif;
+  color: white;
+  margin-bottom: 10px;
+}
 .footer {
   background-color: orange;
   width: 100%;
